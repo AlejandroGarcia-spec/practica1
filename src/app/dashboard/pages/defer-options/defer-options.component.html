@@ -1,0 +1,43 @@
+@defer {
+    <div class="p-4 bg-white shadow-md rounded-lg">
+        <h2 class="text-xl font-bold mb-2">Pokémon Disponibles</h2>
+        <ul class="list-disc pl-5">
+          <li  class="text-gray-700">
+            charizar
+          </li>
+          <li  class="text-gray-700">
+            bulbasor
+          </li>
+          <li  class="text-gray-700">
+            pikachu
+          </li>
+        </ul>
+      </div>
+  } @placeholder (minimum 5000ms) {
+    <div class="p-4 bg-gray-100 shadow-md rounded-lg">
+        <p class="animate-pulse text-gray-400 text-center">Cargando datos...</p>
+      </div>
+  }
+
+  <br>
+  @defer {
+    <div class="p-4 bg-white shadow-md rounded-lg">
+        <h2 class="text-xl font-bold mb-2">Pokémon Disponibles</h2>
+        <ul class="list-disc pl-5">
+          <li  class="text-gray-700">
+            charizar
+          </li>
+          <li  class="text-gray-700">
+            bulbasor
+          </li>
+          <li  class="text-gray-700">
+            pikachu
+          </li>
+        </ul>
+      </div>
+  } @loading {
+} @placeholder (minimum 5000ms){
+      <img alt="loading..." src="https://icons8.com/preloaders/preloaders/1479/Ghost.gif" />
+    <p>Placeholder content</p>
+  } 
+  
