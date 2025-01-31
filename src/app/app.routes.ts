@@ -14,6 +14,10 @@ export const routes: Routes = [
                 loadComponent:()=> import('./dashboard/pages/defer-options/defer-options.component'),
             },
             {
+                path:'reactive-forms',
+                loadComponent:()=> import('./dashboard/pages/reactiveForms/reactiveForms.component'),
+            },
+            {
                 path:'', redirectTo:'control-flow', pathMatch:'full'
             }
         ]
