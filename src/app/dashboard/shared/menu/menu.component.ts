@@ -26,6 +26,10 @@ export class MenuComponent {
     titulo:' reactive forms',
     path:'reactive-forms'
   },
+ {
+    titulo:' examen ',
+    path:'exam'
+  },
 ]
   constructor(private router: Router) {}
 

@@ -1,0 +1,155 @@
+@if (morado){
+    <button class="bg-purple-500 m-2 p-2 rounded-xl shadow-xl hover:bg-blue-400" (click)="moradoo()">
+        boton morado
+    </button>
+}
+@if (verde){
+    <button class="bg-green-500 m-2 p-2 rounded-xl shadow-xl hover:bg-blue-400" (click)="verdee()">
+        boton verde
+    </button>
+}
+<button class="bg-gray-400 m-2 p-2 rounded-xl shadow-xl hover:bg-blue-400" (click)="gris()">
+    boton gris
+</button>
+@switch(grade){
+    @case(1){
+        <img src="https://i.pinimg.com/736x/00/a7/85/00a785244ce5e266ee1fe488d3448fde.jpg" alt="">
+        
+    }
+    @case(2){
+        <img src="https://i.pinimg.com/736x/00/92/0f/00920f6c8a440416c9ba3ffca76faad2.jpg" alt="">
+        
+    }
+    @case(3){
+        <img src="https://i.pinimg.com/736x/23/e7/9c/23e79cbdaaeb0149e9c5522df5eac96f.jpg" alt="">
+        
+    }
+    @case(4){
+        <img src="https://i.pinimg.com/736x/7b/39/ef/7b39ef2a94a38c06ae4da5a406a693a2.jpg" alt="">
+        
+    }
+    @case(5){
+        <img src="https://i.pinimg.com/736x/69/5a/d2/695ad2395a13b95a9d071bee572f99bd.jpg" alt="">
+        
+    }
+    @case(6){
+        <img src="https://i.pinimg.com/736x/19/66/69/196669161f42b0fd6401a413212f5ea3.jpg" alt="">
+        
+    }
+    @case(7){
+        <img src="https://i.pinimg.com/736x/ea/4a/a5/ea4aa5cb71d281f97c518bddcced798e.jpg" alt="">
+        
+    }
+    @case(8){
+        <img src="https://i.pinimg.com/736x/60/cf/2d/60cf2d95d360756082a950444d9d5dbe.jpg" alt="">
+        
+    }@default  {
+        <p>☀️</p>
+    }
+
+}
+
+
+
+@defer (on interaction) {
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 ">
+        <div class="flex justify-center items-center">
+      
+        <div class="bg-white shadow-lg rounded-2xl p-6 w-full max-w-sm ">
+    
+          <h2 class="text-2xl font-bold text-center mb-6">Registrar</h2>
+          <form [formGroup]="formRegister" class="space-y-4">
+            <div>
+              <label for="user" class="block text-sm font-medium text-gray-700">nombre</label>
+              <input
+              formControlName="nombre"
+              type="text"
+              id="user"
+              name="user"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Ingresa tu usuario"
+              required
+              >
+            </div>
+            <div>
+              <label for="user" class="block text-sm font-medium text-gray-700">apellido</label>
+              <input
+              formControlName="apellido"
+              type="text"
+              id="user"
+              name="user"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Ingresa tu usuario"
+              required
+              >
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700">Correo</label>
+              <input
+              type="email"
+              id="email"
+              formControlName="email"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Ingresa tu correo"
+              required
+            >
+          </div>
+          <div>
+            <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
+            <input
+            type="password"
+            id="password"
+            formControlName="password"
+            class="mt-1 block w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Ingresa tu contraseña"
+              required
+              >
+            </div>
+          <div>
+            <label for="edad" class="block text-sm font-medium text-gray-700">edad</label>
+            <input
+            type="number"
+            id="edad"
+            formControlName="edad"
+            class="mt-1 block w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Ingresa tu contraseña"
+              required
+              >
+            </div>
+            <button
+            type="submit"
+            class="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+            Registrar
+          </button>
+        </form>
+      </div>
+      
+      </div>
+      
+      <div class="flex justify-center items-center">
+      
+        <div class="bg-white shadow-lg rounded-2xl p-6 w-full max-w-sm ">
+            <h1>FormRegistes</h1>
+            <pre>
+                {{formRegister.value|json}}
+            </pre>
+            <hr>
+            <pre>
+                {{formRegister.status}}
+            </pre>
+        </div>
+          </div>
+      </div>
+    } @placeholder {
+        <div class="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white">
+            <img class="w-full h-48 object-cover" src="https://i.pinimg.com/736x/57/bf/a7/57bfa7c82b60dd255661fb609fdebd01.jpg" alt="Imagen de ejemplo">
+            <div class="p-4">
+                <h2 class="text-xl font-bold text-gray-800">Sr. robert rodrigez sanchez</h2>
+                <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+                    editar
+                </button>
+            </div>
+        </div>
+    
+    }
+  

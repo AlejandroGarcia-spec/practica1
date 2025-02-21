@@ -18,6 +18,10 @@ export const routes: Routes = [
                 loadComponent:()=> import('./dashboard/pages/reactiveForms/reactiveForms.component'),
             },
             {
+                path:'exam',
+                loadComponent:()=> import('./dashboard/pages/examen1p/examen1p.component'),
+            },
+            {
                 path:'', redirectTo:'control-flow', pathMatch:'full'
             }
         ]
