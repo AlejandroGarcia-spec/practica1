@@ -19,6 +19,32 @@
 			  <p class="p-1 font-light text-red-500 text-xs w-full">{{getErrorMessages('nombre')}} </p>
 		</div>
 		<div>
+		  <label for="user" class="block text-sm font-medium text-gray-700">numero</label>
+		  <input
+		  formControlName="telefono"
+		  type="number"
+		  id="user"
+		  name="user"
+		  class="mt-1 block w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+		  placeholder="Ingresa tu usuario"
+		  required
+		  >
+			  <p class="p-1 font-light text-red-500 text-xs w-full">{{getErrorMessages('telefono')}} </p>
+		</div>
+		<div>
+		  <label for="user" class="block text-sm font-medium text-gray-700">Usuario</label>
+		  <input
+		  formControlName="nombre"
+		  type="text"
+		  id="user"
+		  name="user"
+		  class="mt-1 block w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+		  placeholder="Ingresa tu usuario"
+		  required
+		  >
+			  <p class="p-1 font-light text-red-500 text-xs w-full">{{getErrorMessages('nombre')}} </p>
+		</div>
+		<div>
 		  <label for="email" class="block text-sm font-medium text-gray-700">Correo</label>
 		  <input
 		  type="email"
@@ -41,6 +67,44 @@
 		  required
 		  >
 			<p class="p-1 font-light text-red-500 text-xs w-full">{{getErrorMessages('password')}}</p>
+		</div>
+	  
+	  <div>
+		<label for="password" class="block text-sm font-medium text-gray-700">Contraseña confirmar</label>
+		<input
+		type="password"
+		id="password"
+		formControlName="confirmPass"
+		class="mt-1 block w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+		  placeholder="Ingresa tu contraseña"
+		  required
+		  >
+			<!----<p class="p-1 font-light text-red-500 text-xs w-full">{{getErrorMessages('validators')}}</p>--->
+			<p class="p-1 font-light text-red-500 text-xs w-full">{{getErrorMessages('confirmPass')}}</p>
+		</div>
+	  <div>
+		<label for="password" class="block text-sm font-medium text-gray-700">Nombre completo</label>
+		<input
+		type="text"
+		id="password"
+		formControlName="fullName"
+		class="mt-1 block w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+		  placeholder="Ingresa tu contraseña"
+		  required
+		  >
+			<p class="p-1 font-light text-red-500 text-xs w-full">{{getErrorMessages('fullName')}}</p>
+		</div>
+	  <div>
+		<label for="password" class="block text-sm font-medium text-gray-700">email</label>
+		<input
+		type="text"
+		id="password"
+		formControlName="email"
+		class="mt-1 block w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+		  placeholder="Ingresa tu contraseña"
+		  required
+		  >
+			<p class="p-1 font-light text-red-500 text-xs w-full">{{getErrorMessages('email')}}</p>
 		</div>
 
 		<!----
@@ -157,6 +221,76 @@
 		  >
 		  <p class="p-1 font-light text-red-500 text-xs w-full">{{getErrorMessages2('stock')}} </p>
 		</div>
+		
+		<!----
+		
+		<button 
+		(click)="register()"
+		type="submit"
+		class="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+		Registrar
+	  </button>
+		-->
+		<button 
+		(click)="register()"
+		type="submit"
+		class="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+		Registrar
+	  </button>
+	</form>
+  </div>
+  
+  </div>
+  
+
+  </div>
+<br>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-3 ">
+	<div class="flex justify-center items-center">
+  
+	<div class="bg-white shadow-lg rounded-2xl p-6 w-full max-w-sm ">
+
+	  <h2 class="text-2xl font-bold text-center mb-6">Registrar</h2>
+	  <form [formGroup]="formNuevo" class="space-y-4">
+		<div>
+		  <label for="user" class="block text-sm font-medium text-gray-700">Nombre y asunto</label>
+		  <input
+		  formControlName="NameandAsunto"
+		  type="text"
+		  id="user"
+		  name="user"
+		  class="mt-1 block w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+		  placeholder="Ingresa tu usuario"
+		  required
+		  >
+		  <p class="p-1 font-light text-red-500 text-xs w-full">{{getErrorMessages3('NameandAsunto')}} </p>
+		</div>
+		<div>
+		  <label for="email" class="block text-sm font-medium text-gray-700">message</label>
+		  <input
+		  type="text"
+		  id="email"
+		  formControlName="message"
+		  class="mt-1 block w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+		  placeholder="Ingresa tu correo"
+		  required
+		>
+		<p class="p-1 font-light text-red-500 text-xs w-full">{{getErrorMessages3('message')}} </p>
+	  </div>
+	  <div>
+		<label for="password" class="block text-sm font-medium text-gray-700">email</label>
+		<input
+		type="text"
+		id="password"
+		formControlName="email"
+		class="mt-1 block w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+		  placeholder="Ingresa tu contraseña"
+		  required
+		  >
+		  <p class="p-1 font-light text-red-500 text-xs w-full">{{getErrorMessages3('email')}} </p>
+		</div>
+	  
+	
 		
 		<!----
 		

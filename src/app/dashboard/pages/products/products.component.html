@@ -1,0 +1,22 @@
+@for(p of price;track $index){
+<div class="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-4">
+    <img
+      class="w-full h-48 object-cover rounded-lg"
+      src="https://i.pinimg.com/736x/8c/83/55/8c8355869c14ba08cb6e0c3a8a338561.jpg"
+      alt="Producto"
+    />
+    <div class="p-4">
+      <h2 class="text-xl font-bold text-gray-800">Nombre del Producto</h2>
+      <p class="text-gray-600 mt-2">
+        Esta es una breve descripción del producto. Explica sus características y beneficios.
+      </p>
+      <div class="mt-4 flex justify-between items-center">
+        <span [class]="p | toColor" class="  text-lg font-semibold ">{{p}}</span>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+          Comprar
+        </button>
+      </div>
+    </div>
+  </div>
+}
+ 

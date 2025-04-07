@@ -1,0 +1,82 @@
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-gray-50">
+    <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-red-500">
+      <p class="text-xl font-bold text-red-700">CurrencyPipe:</p>
+      <p class="text-gray-600">Precio: {{ 2500 | currency: 'USD':'symbol':'1.0-0' }}</p>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-blue-500">
+      <p class="text-xl font-bold text-blue-700">DatePipe:</p>
+      <p class="text-gray-600">Hoy es: {{ today | date: 'fullDate' }}</p>
+    </div>
+  
+    <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-green-500">
+      <p class="text-xl font-bold text-green-700">DecimalPipe:</p>
+      <p class="text-gray-600">Número formateado: {{ 12345.6789 | number: '1.2-2' }}</p>
+    </div>
+  
+  
+    <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-gray-500">
+      <p class="text-xl font-bold text-gray-700">JsonPipe:</p>
+      <pre class="bg-gray-100 p-3 rounded-lg text-gray-600">{{ anime | json }}</pre>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-purple-500">
+      <p class="text-xl font-bold text-purple-700">PercentPipe:</p>
+      <p class="text-gray-600">Progreso: {{ 0.345 | percent: '1.1-2' }}</p>
+    </div>
+  
+    <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-yellow-500">
+      <p class="text-xl font-bold text-yellow-700">LowerCasePipe:</p>
+      <p class="text-gray-600">{{ 'ANGULAR ES GENIAL' | lowercase }}</p>
+    </div>
+  
+  
+    <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-indigo-500">
+      <p class="text-xl font-bold text-indigo-700">SlicePipe:</p>
+      <p class="text-gray-600">{{ 'Hola Mundo, estoy aprendiendo Angular' | slice:0:10 }}</p>
+    </div>
+  
+    <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-gray-700">
+      <p class="text-xl font-bold text-gray-900">UpperCasePipe:</p>
+      <p class="text-gray-600">{{ 'angular rocks!' | uppercase }}</p>
+    </div>
+  
+    <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-teal-500">
+      <p class="text-xl font-bold text-teal-700">TitlecasePipe:</p>
+      <p class="text-gray-600">{{ 'aprendiendo angular con tailwind' | titlecase }}</p>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-blue-500">
+        <p class="text-xl font-bold text-blue-700">DatePipe - Formato Completo:</p>
+        <p class="text-gray-600">Hoy es: {{ today | date: 'fullDate' }}</p>
+      </div>
+      
+      <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-green-500">
+        <p class="text-xl font-bold text-green-700">DatePipe - Fecha Corta:</p>
+        <p class="text-gray-600">{{ today | date: 'shortDate' }}</p>
+      </div>
+      
+      <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-red-500">
+        <p class="text-xl font-bold text-red-700">DatePipe - Fecha y Hora:</p>
+        <p class="text-gray-600">{{ today | date: 'medium' }}</p>
+      </div>
+      
+      <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-purple-500">
+        <p class="text-xl font-bold text-purple-700">DatePipe - Hora Exacta:</p>
+        <p class="text-gray-600">{{ today | date: 'shortTime' }}</p>
+      </div>
+      
+      <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-yellow-500">
+        <p class="text-xl font-bold text-yellow-700">DatePipe - Mes y Año:</p>
+        <p class="text-gray-600">{{ today | date: 'MMMM y' }}</p>
+      </div>
+      
+      <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-indigo-500">
+        <p class="text-xl font-bold text-indigo-700">DatePipe - Día de la Semana:</p>
+        <p class="text-gray-600">{{ today | date: 'EEEE' }}</p>
+      </div>
+      
+      <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-gray-500">
+        <p class="text-xl font-bold text-gray-700">DatePipe - Personalizado:</p>
+        <p class="text-gray-600">{{ today | date: 'dd/MM/yyyy - HH:mm:ss' }}</p>
+      </div>
+      
+  </div>
+  

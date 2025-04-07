@@ -23,6 +23,14 @@ export class MenuComponent {
     path:'defer-options'
   },
  {
+    titulo:' pipes',
+    path:'pipes'
+  },
+ {
+    titulo:'array',
+    path:'array'
+  },
+ {
     titulo:' reactive forms',
     path:'reactive-forms'
   },
@@ -30,8 +38,21 @@ export class MenuComponent {
     titulo:' examen ',
     path:'exam'
   },
+ {
+    titulo:' examen2 ',
+    path:'examen'
+  },
+ {
+    titulo:' producto ',
+    path:'product'
+  },
+ {
+    titulo:' login ',
+    path:'login'
+  },
 ]
   constructor(private router: Router) {}
+
 
   redirectToHome() {
     this.router.navigate(['/dashboard/defer-options']);

@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ToMinutesPipe } from '../../../pipes/to-minutes.pipe';
 
 @Component({
   selector: 'app-control-flow',
   standalone: true,
-  imports: [],
+  imports: [ToMinutesPipe],
   templateUrl: './control-flow.component.html',
   styles: `
     :host {
@@ -13,6 +14,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class ControlFlowComponent { 
+  segundos=[1500,2300,4200,520]
   verMesage=false;
   isAdmin=false;
   name="alejandro";

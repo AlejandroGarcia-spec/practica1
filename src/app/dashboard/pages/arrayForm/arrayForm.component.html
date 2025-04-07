@@ -1,0 +1,58 @@
+<div class="max-w-md mx-auto p-6 bg-white rounded-2xl shadow-md space-y-4">
+    <form [formGroup]="taskForm" (ngSubmit)="enviarFormulario()">
+        <div formArrayName="task" *ngFor="let t of task.controls; let i=index" class="flex items-center space-x-2 border p-3 rounded-lg shadow-sm">
+            <p class="flex-1 text-gray-700">Tarea 1</p>
+            <input [formControlName]="i" type="text" class="border rounded-lg px-3 py-1 focus:outline-none focus:ring-2 focus:ring-blue-400">
+            <button (click)="removeTask(i)" class="bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600">Borrar</button>
+        </div>
+        <div class="flex justify-between">
+            <button (click)="addTask()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Agregar tarea</button>
+            <button class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">Enviar</button>
+        </div>
+    </form>
+</div>
+
+<br>
+
+<div class="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">
+    <form [formGroup]="topinForm" >
+
+        <h2 class="text-xl font-semibold mb-4">Selecciona tu pedido</h2>
+      
+        <!-- Selección de Postre -->
+        <label class="block text-sm font-medium text-gray-700">Postre</label>
+        <select  class="w-full mt-1 p-2 border rounded-lg">
+          <option *ngFor="let postre of postres" [value]="postre">{{ postre }}</option>
+        </select>
+      
+        <!-- Selección de Método de Pago -->
+        <label class="block text-sm font-medium text-gray-700 mt-4">Método de Pago</label>
+        <select  class="w-full mt-1 p-2 border rounded-lg">
+          <option *ngFor="let metodo of pago" [value]="metodo">{{ metodo }}</option>
+        </select>
+<div formArrayName="tareas2">
+    <div *ngFor="let t of toppin.controls; let i = index" class="flex items-center space-x-2 border p-3 rounded-lg shadow-sm">
+      <input [formControlName]="i" type="text" class="border rounded-lg px-3 py-1 focus:outline-none focus:ring-2 focus:ring-blue-400">
+      
+     
+    </div>
+  </div>
+  
+  
+  <button type="button" (click)="addToppin()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 mt-2">
+    Agregar toppins
+  </button>
+  
+  <h2 class="mt-4 text-lg font-semibold">Lista de toppons:</h2>
+  <ul>
+    <li *ngFor="let tarea of toppin.value" class="border p-2 rounded-lg mt-2 shadow-sm bg-gray-100">
+      {{ tarea }}
+    </li>
+  </ul>
+  
+  <button type="submit" [disabled]="toppin.length === 0" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 mt-4 disabled:bg-gray-400 disabled:cursor-not-allowed">
+    Enviar pedido
+</button>
+    </form>
+  </div>
+  
